@@ -59,8 +59,8 @@ for (byte i = 0; i <= 16; i++)
   Serial.print(" = ");
   Serial.print(volt[i]);
   Serial.println("V");
-  lcd.setCursor(i/4,4*(i%4));
-  lcd.print(volt[i]);
+  lcd.setCursor(5*(i%4),i/4);
+  lcd.print(volt[i],1);
   lcd.print("V");
   delay(5);
 }
